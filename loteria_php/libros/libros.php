@@ -4,12 +4,14 @@
         public $titulo;
         public $ejemplares;
         public $genero;
+        
 
         public function __construct($autor,$titulo,$ejemplares,$genero){
             $this->autor=$autor;
             $this->titulo=$titulo;
             $this->ejemplares=$ejemplares;
             $this->genero=$genero;
+            
         }
 
         public function obtenerAutor(){

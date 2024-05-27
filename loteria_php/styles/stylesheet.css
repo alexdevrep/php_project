@@ -113,6 +113,49 @@ h1{
     margin-bottom: 15vh;
 }
 
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 50%;
+    
+}
+
+ th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th{
+    background-color: #535050;
+}
+
+#table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:grid;
+    grid-template-rows: 25%,25%,25%,25%;
+    border: solid 3px;
+    height:40vh;
+    width:40vw;
+    
+}
+#book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:8vh;
+}
+
+
+
 
 
 
