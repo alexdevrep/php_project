@@ -1,11 +1,6 @@
 <?php 
     include 'libros.php';
-    include 'lista_libros.php';
-    
-
-    
-    
-    
+    include 'lista_libros.php';  
 ?>
 <!DOCTYPE html>
 <html lang="en">
