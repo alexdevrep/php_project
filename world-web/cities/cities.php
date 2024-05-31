@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Ciudades</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/world-web/home/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         function confirmarBorrado(id, nombre) {
@@ -85,9 +85,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </tr>
                 <?php endforeach; ?>
             </table>
-            <p><a href="cities.php">Limpiar Listado</a></p>
-            <p><a href="agregar-ciudad.php?country=<?= $countryCodeSeleccionado ?>">Agregar Ciudad</a></p>
+            
         <?php endif; ?>
+        <p><a href="cities.php">Limpiar Listado</a></p>
+            <p><a href="agregar-ciudad.php?country=<?= $countryCodeSeleccionado ?>">Agregar Ciudad</a></p>
+            <a href="/world-web/home/home.php">Volver a la página principal</a>
     </div>
 </body>
 

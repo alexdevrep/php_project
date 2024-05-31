@@ -26,15 +26,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paises del mundo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/world-web/home/styles.css">
     <script>
         function confirmarBorrado(id, nombre) {
-            if (confirm('¿Estás seguro de que quieres eliminar el pais "' + nombre + '"?')) {
+            
                 window.location.href = 'borrar-pais.php?id=' + id;
-            }
+            
         }
     </script>
 </head>
 <body>
+    <div class="container">
+    <h1>Listado de países por continente</h1>
     <form method="post" action="">
             <label for="continent">Selecciona un continente:</label>
             <select name="continent" id="continent">
@@ -62,9 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <td><?= $pais['population'] ?></td> 
                     <td>
                         <a href="editar-pais.php?id=<?= $pais['code'] ?>" title="Editar"><i class="fas fa-edit"></i></a>
-                        <a href="#" title="Eliminar" onclick="confirmarBorrado('<?= htmlspecialchars($pais['code'], ENT_QUOTES) ?>', '<?= htmlspecialchars($pais['nombre'], ENT_QUOTES) ?>')">
-    <i class="fas fa-trash-alt"></i>
-</a>
+                        <a href="#" title="Eliminar" onclick="confirmarBorrado('<?= htmlspecialchars($pais['code'], ENT_QUOTES) ?>', '<?= htmlspecialchars($pais['nombre'], ENT_QUOTES) ?>')"><i class="fas fa-trash-alt"></i><a>
 
                     </td>
                 </tr>
@@ -74,6 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </table>
         <p><a href="countries.php">Limpiar Listado</a></p>
             <p><a href="agregar-pais.php?country=<?= $countryId ?>">Agregar Pais</a></p>
+            <a href="/world-web/home/home.php">Volver a la página principal</a>
+
+    </div>
+    
            
 </body>
 </html>

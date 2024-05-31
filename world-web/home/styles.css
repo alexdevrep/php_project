@@ -54,3 +54,13 @@ tr:nth-child(even) {
 .acciones a {
     margin: 0 5px;
 }
+
+.enlaces{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.enlaces a{
+    margin-right:2vw;
+}
